@@ -54,6 +54,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.portfolio {
+	background: linear-gradient(50deg, #000428 0%,#004e92 100%);
+  display: flex;
+  flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+	box-sizing: border-box;
+
+}
+
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
