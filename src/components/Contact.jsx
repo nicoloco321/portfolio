@@ -4,16 +4,23 @@ const Contact = () => {
 	return (
 		<section id="contact" className="section">
 			<div className="container">
-				<h2>Contact Me</h2>
+				<h2 className="contact-heading">Contact Me</h2>
 				<div className="contact-content">
-					<p>I'm always interested in hearing about new projects and opportunities.</p>
+					<p>Feel free to reach out to me through any of these platforms:</p>
 					<div className="contact-links">
-						<a href="mailto:your.email@example.com">Email</a>
-						<a href="https://linkedin.com/in/yourprofile" target="_blank">
+						<a href="mailto:nicoloco321@gmail.com">Email</a>
+						<a
+							href="https://www.linkedin.com/in/nicholas-buryniuk-82a057142/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							LinkedIn
 						</a>
-						<a href="https://github.com/yourusername" target="_blank">
+						<a href="https://github.com/nicoloco321" target="_blank" rel="noopener noreferrer">
 							GitHub
+						</a>
+						<a href="src/assets/Resume.pdf" download="Nicholas_Buryniuk_Resume.pdf">
+							Resume
 						</a>
 					</div>
 				</div>
