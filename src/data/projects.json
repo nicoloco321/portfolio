@@ -5,21 +5,96 @@
 			"title": "Pet Tracker",
 			"description": "A pet tracker app that allows you to track your pets using a LoRaWAN network",
 			"demoLink": "#",
-			"githubLink": "#"
+			"githubLink": "#",
+			"learnMore": "/blog/pet-tracker",
+			"blogContent": {
+				"title": "Building a Pet Tracker with LoRaWAN",
+				"date": "2024-03-15",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "In this project, I developed a pet tracking system using LoRaWAN technology. The system consists of a small, lightweight tracker that can be attached to a pet's collar and a web application for monitoring their location."
+					},
+					{
+						"type": "heading",
+						"text": "Technical Stack"
+					},
+					{
+						"type": "list",
+						"items": [
+							"LoRaWAN for long-range communication",
+							"React for the frontend dashboard",
+							"Node.js for the backend server",
+							"MongoDB for storing location data"
+						]
+					},
+					{
+						"type": "heading",
+						"text": "Challenges and Solutions"
+					},
+					{
+						"type": "paragraph",
+						"text": "One of the main challenges was ensuring reliable communication in various environments. I implemented a hybrid approach using both LoRaWAN and GPS to ensure accurate tracking."
+					}
+				]
+			}
 		},
 		{
 			"id": "project2",
 			"title": "Dark Souls",
 			"description": "A database application that stores weapons, armor, boss entities, spells, and all their corresponding stats",
 			"demoLink": "#",
-			"githubLink": "#"
+			"githubLink": "#",
+			"learnMore": "/blog/dark-souls",
+			"blogContent": {
+				"title": "Creating a Dark Souls Database Application",
+				"date": "2024-02-20",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "This project involved creating a comprehensive database of Dark Souls game data, including weapons, armor, bosses, and spells. The application allows users to search, filter, and compare different items and their stats."
+					},
+					{
+						"type": "heading",
+						"text": "Features"
+					},
+					{
+						"type": "list",
+						"items": [
+							"Advanced search functionality",
+							"Item comparison tool",
+							"Build calculator",
+							"Interactive UI with game-inspired design"
+						]
+					},
+					{
+						"type": "heading",
+						"text": "Technical Implementation"
+					},
+					{
+						"type": "paragraph",
+						"text": "The application uses a RESTful API architecture with a PostgreSQL database. The frontend is built with React and styled with a dark theme inspired by the game's aesthetic."
+					}
+				]
+			}
 		},
 		{
 			"id": "project3",
 			"title": "Project 3",
 			"description": "Description of your third project goes here.",
 			"demoLink": "#",
-			"githubLink": "#"
+			"githubLink": "#",
+			"learnMore": "/blog/project3",
+			"blogContent": {
+				"title": "Project 3: Detailed Overview",
+				"date": "2024-01-10",
+				"content": [
+					{
+						"type": "paragraph",
+						"text": "This is a placeholder for the third project's blog post content."
+					}
+				]
+			}
 		}
 	]
 }

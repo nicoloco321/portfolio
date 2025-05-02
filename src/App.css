@@ -238,9 +238,8 @@ main {
 	border-radius: 15px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
-	text-decoration: none;
-	display: block;
-	color: inherit;
+	cursor: pointer;
+	position: relative;
 }
 
 .project-card:hover {
@@ -258,6 +257,8 @@ main {
 	margin-top: 1.5rem;
 	display: flex;
 	gap: 1rem;
+	position: relative;
+	z-index: 1;
 }
 
 .project-links a {
@@ -268,8 +269,6 @@ main {
 	border-radius: 20px;
 	background-color: rgba(9, 132, 227, 0.1);
 	transition: all 0.3s ease;
-	position: relative;
-	z-index: 1;
 }
 
 .project-links a:hover {
@@ -414,6 +413,86 @@ main {
 }
 
 .project-details .project-links a:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog Post styles */
+.blog-post {
+	min-height: 100vh;
+	padding: 6rem 0;
+	background: linear-gradient(50deg, #000428 0%, #004e92 100%);
+	color: white;
+}
+
+.blog-post .container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.blog-post h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.blog-meta {
+	margin-bottom: 2rem;
+	opacity: 0.8;
+}
+
+.blog-content {
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 2rem;
+	border-radius: 15px;
+	margin-bottom: 2rem;
+}
+
+.blog-content p {
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+}
+
+.blog-content h2 {
+	margin: 2rem 0 1rem;
+	font-size: 1.8rem;
+	color: #0984e3;
+}
+
+.blog-content ul {
+	margin: 1rem 0;
+	padding-left: 2rem;
+}
+
+.blog-content li {
+	margin-bottom: 0.5rem;
+}
+
+.blog-links {
+	display: flex;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.blog-links a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	padding: 0.8rem 1.5rem;
+	border-radius: 25px;
+	transition: all 0.3s ease;
+}
+
+.blog-links .demo-link {
+	background-color: #0984e3;
+}
+
+.blog-links .github-link {
+	background-color: #2d3436;
+}
+
+.blog-links a:hover {
 	transform: translateY(-3px);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }

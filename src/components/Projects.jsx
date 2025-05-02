@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import projectData from "../data/projects.json";
 
 const Projects = () => {
@@ -8,12 +9,7 @@ const Projects = () => {
 				<h2>Projects</h2>
 				<div className="projects-grid">
 					{projectData.projects.map((project) => (
-						<a
-							key={project.id}
-							href={project.demoLink}
-							rel="noopener noreferrer"
-							className="project-card"
-						>
+						<Link key={project.id} to={`/blog/${project.id}`} className="project-card">
 							<h3>{project.title}</h3>
 							<p>{project.description}</p>
 							<div className="project-links">
@@ -34,7 +30,7 @@ const Projects = () => {
 									GitHub
 								</a>
 							</div>
-						</a>
+						</Link>
 					))}
 				</div>
 			</div>
