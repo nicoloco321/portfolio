@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import projectData from "../data/projects.json";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-cpp";
 
 const BlogPost = () => {
 	const { projectId } = useParams();
 	const project = projectData.projects.find((p) => p.id === projectId);
+
+	useEffect(() => {
+		Prism.highlightAll();
+	}, [project]);
 
 	if (!project || !project.blogContent) {
 		return <div>Blog post not found</div>;
@@ -25,6 +33,12 @@ const BlogPost = () => {
 							<li key={index}>{listItem}</li>
 						))}
 					</ul>
+				);
+			case "code":
+				return (
+					<pre key={item.text} className="code-block">
+						<code className={`language-${item.language || "cpp"}`}>{item.text}</code>
+					</pre>
 				);
 			default:
 				return null;

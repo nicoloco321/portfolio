@@ -13,7 +13,7 @@
 				"content": [
 					{
 						"type": "paragraph",
-						"text": "In this project, I developed a pet tracking system using LoRaWAN technology. The system consists of a small, lightweight tracker that can be attached to a pet's collar and a web application for monitoring their location."
+						"text": "In this project, I developed a pet tracking system using LoRaWAN technology and the Sidewalk gateway. The system consists of a small, lightweight tracker that can be attached to a pet's collar and a web application for monitoring their location."
 					},
 					{
 						"type": "heading",
@@ -22,19 +22,29 @@
 					{
 						"type": "list",
 						"items": [
-							"LoRaWAN for long-range communication",
-							"React for the frontend dashboard",
-							"Node.js for the backend server",
+							"LoRa Radio for long-range communication",
+							"nrf52840 microcontroller for the tracker",
+							"React for the web application",
 							"MongoDB for storing location data"
 						]
 					},
 					{
 						"type": "heading",
-						"text": "Challenges and Solutions"
+						"text": "Getting Started"
 					},
 					{
 						"type": "paragraph",
-						"text": "One of the main challenges was ensuring reliable communication in various environments. I implemented a hybrid approach using both LoRaWAN and GPS to ensure accurate tracking."
+						"text": "We decided to use the Seeed Studio Xiao nRF52840 Sense board for the tracker, which comes with built-in Sidewalk capabilities. Wonce we got the board, we started small with the blinky example to get familiar with the arduino IDE and bootloader."
+					},
+					{
+						"type": "code",
+						"language": "c",
+						"text": "// blinky sameple\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  delay(1000);\n  digitalWrite(LED_BUILTIN, LOW);\n  delay(1000);\n}"
+					},
+					{
+						"type": "web",
+						"items": "",
+						"text": "sidewalk example"
 					}
 				]
 			}
