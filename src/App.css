@@ -238,6 +238,9 @@ main {
 	border-radius: 15px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
+	text-decoration: none;
+	display: block;
+	color: inherit;
 }
 
 .project-card:hover {
@@ -265,6 +268,8 @@ main {
 	border-radius: 20px;
 	background-color: rgba(9, 132, 227, 0.1);
 	transition: all 0.3s ease;
+	position: relative;
+	z-index: 1;
 }
 
 .project-links a:hover {
@@ -351,4 +356,64 @@ main {
 	width: 100%;
 	margin: 0;
 	padding: 1rem 0;
+}
+
+/* Project Details page */
+.project-details {
+	min-height: 100vh;
+	padding: 6rem 0;
+	background: linear-gradient(50deg, #000428 0%, #004e92 100%);
+	color: white;
+}
+
+.project-details .container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.project-details h1 {
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-details .description {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	opacity: 0.9;
+}
+
+.project-details .project-content {
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 2rem;
+	border-radius: 15px;
+	margin-bottom: 2rem;
+}
+
+.project-details .project-links {
+	display: flex;
+	gap: 1rem;
+}
+
+.project-details .project-links a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	padding: 0.8rem 1.5rem;
+	border-radius: 25px;
+	transition: all 0.3s ease;
+}
+
+.project-details .demo-link {
+	background-color: #0984e3;
+}
+
+.project-details .github-link {
+	background-color: #2d3436;
+}
+
+.project-details .project-links a:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }

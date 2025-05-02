@@ -1,0 +1,25 @@
+{
+	"projects": [
+		{
+			"id": "project1",
+			"title": "Pet Tracker",
+			"description": "A pet tracker app that allows you to track your pets using a LoRaWAN network",
+			"demoLink": "#",
+			"githubLink": "#"
+		},
+		{
+			"id": "project2",
+			"title": "Dark Souls",
+			"description": "A database application that stores weapons, armor, boss entities, spells, and all their corresponding stats",
+			"demoLink": "#",
+			"githubLink": "#"
+		},
+		{
+			"id": "project3",
+			"title": "Project 3",
+			"description": "Description of your third project goes here.",
+			"demoLink": "#",
+			"githubLink": "#"
+		}
+	]
+}
