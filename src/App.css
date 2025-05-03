@@ -479,7 +479,7 @@ main {
 }
 
 .blog-content .code-block {
-	background-color: #2d2d2d;
+	background-color: #1a1a1a;
 	padding: 1rem;
 	border-radius: 8px;
 	margin: 1.5rem 0;
@@ -495,60 +495,58 @@ main {
 	display: block;
 }
 
-/* Override Prism.js theme colors */
+/* New theme for C/C++ syntax highlighting */
 .blog-content .code-block .token.comment,
 .blog-content .code-block .token.prolog,
 .blog-content .code-block .token.doctype,
 .blog-content .code-block .token.cdata {
-	color: #999;
+	color: #7c7c7c; /* Gray for comments */
 }
 
 .blog-content .code-block .token.punctuation {
-	color: #ccc;
+	color: #ffffff; /* White for punctuation */
 }
 
-.blog-content .code-block .token.property,
-.blog-content .code-block .token.tag,
-.blog-content .code-block .token.boolean,
-.blog-content .code-block .token.number,
-.blog-content .code-block .token.constant,
-.blog-content .code-block .token.symbol,
-.blog-content .code-block .token.deleted {
-	color: #f92672;
-}
-
-.blog-content .code-block .token.selector,
-.blog-content .code-block .token.attr-name,
-.blog-content .code-block .token.string,
-.blog-content .code-block .token.char,
-.blog-content .code-block .token.builtin,
-.blog-content .code-block .token.inserted {
-	color: #a6e22e;
-}
-
+.blog-content .code-block .token.keyword,
 .blog-content .code-block .token.operator,
-.blog-content .code-block .token.entity,
-.blog-content .code-block .token.url,
-.blog-content .code-block .language-css .token.string,
-.blog-content .code-block .style .token.string {
-	color: #67cdcc;
+.blog-content .code-block .token.control {
+	color: #ff79c6; /* Pink for keywords and control flow */
 }
 
-.blog-content .code-block .token.atrule,
-.blog-content .code-block .token.attr-value,
-.blog-content .code-block .token.keyword {
-	color: #f92672;
+.blog-content .code-block .token.string,
+.blog-content .code-block .token.char {
+	color: #f1fa8c; /* Yellow for strings */
 }
 
-.blog-content .code-block .token.function,
-.blog-content .code-block .token.class-name {
-	color: #dd4a68;
+.blog-content .code-block .token.number,
+.blog-content .code-block .token.boolean {
+	color: #bd93f9; /* Purple for numbers and booleans */
 }
 
-.blog-content .code-block .token.regex,
-.blog-content .code-block .token.important,
-.blog-content .code-block .token.variable {
-	color: #fd971f;
+.blog-content .code-block .token.function {
+	color: #50fa7b; /* Green for functions */
+}
+
+.blog-content .code-block .token.class-name,
+.blog-content .code-block .token.type-definition {
+	color: #8be9fd; /* Cyan for types and classes */
+}
+
+.blog-content .code-block .token.variable,
+.blog-content .code-block .token.property {
+	color: #ffb86c; /* Orange for variables */
+}
+
+.blog-content .code-block .token.macro {
+	color: #ff5555; /* Red for macros */
+}
+
+.blog-content .code-block .token.preprocessor {
+	color: #6272a4; /* Muted blue for preprocessor directives */
+}
+
+.blog-content .code-block .token.include {
+	color: #ff79c6; /* Pink for includes */
 }
 
 .blog-links {
