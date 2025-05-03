@@ -26,21 +26,37 @@ const Header = () => {
 		};
 	}, [lastScrollY]);
 
+	const handleClick = (e, targetId) => {
+		e.preventDefault();
+		const element = document.getElementById(targetId);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
 	return (
 		<header className={`header ${isHidden ? "hidden" : ""}`}>
 			<nav className="nav">
 				<ul>
 					<li>
-						<a href="#about">About</a>
+						<a href="#about" onClick={(e) => handleClick(e, "about")}>
+							About
+						</a>
 					</li>
 					<li>
-						<a href="#skills">Skills</a>
+						<a href="#skills" onClick={(e) => handleClick(e, "skills")}>
+							Skills
+						</a>
 					</li>
 					<li>
-						<a href="#projects">Projects</a>
+						<a href="#projects" onClick={(e) => handleClick(e, "projects")}>
+							Projects
+						</a>
 					</li>
 					<li>
-						<a href="#contact">Contact</a>
+						<a href="#contact" onClick={(e) => handleClick(e, "contact")}>
+							Contact
+						</a>
 					</li>
 				</ul>
 			</nav>

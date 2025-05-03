@@ -34,7 +34,7 @@
 					},
 					{
 						"type": "paragraph",
-						"text": "We decided to use the Seeed Studio Xiao nRF52840 Sense board for the tracker, which comes with built-in Sidewalk capabilities. Wonce we got the board, we started small with the blinky example to get familiar with the arduino IDE and bootloader."
+						"text": "We decided to use the Seeed Studio Xiao nRF52840 Sense board for the tracker, which comes with built-in Sidewalk capabilities. Once we got the board, we started small with the blinky example to get familiar with the arduino IDE and bootloader."
 					},
 					{
 						"type": "code",
