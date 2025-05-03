@@ -9,28 +9,30 @@ const Projects = () => {
 				<h2>Projects</h2>
 				<div className="projects-grid">
 					{projectData.projects.map((project) => (
-						<Link key={project.id} to={`/blog/${project.id}`} className="project-card">
-							<h3>{project.title}</h3>
-							<p>{project.description}</p>
+						<div key={project.id} className="project-card">
+							<Link to={`/blog/${project.id}`} className="project-content">
+								<h3>{project.title}</h3>
+								<p>{project.description}</p>
+							</Link>
 							<div className="project-links">
 								<a
 									href={project.demoLink}
 									target="_blank"
 									rel="noopener noreferrer"
-									onClick={(e) => e.stopPropagation()}
+									className="demo-link"
 								>
-									Live Demo
+									View Live Demo
 								</a>
 								<a
 									href={project.githubLink}
 									target="_blank"
 									rel="noopener noreferrer"
-									onClick={(e) => e.stopPropagation()}
+									className="github-link"
 								>
-									GitHub
+									View on GitHub
 								</a>
 							</div>
-						</Link>
+						</div>
 					))}
 				</div>
 			</div>
