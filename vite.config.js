@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dotenv from 'dotenv';
-import { fs } from "fs";
+import fs from "fs";
 
 const env = dotenv.parse(fs.readFileSync('./src/cred/umami.env'));
 
