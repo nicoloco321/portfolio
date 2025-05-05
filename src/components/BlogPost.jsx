@@ -23,7 +23,7 @@ const BlogPost = () => {
 	const renderContent = (item) => {
 		switch (item.type) {
 			case "paragraph":
-				return <p key={item.text}>{item.text}</p>;
+				return <p key={item.text} dangerouslySetInnerHTML={{ __html: item.text }} />;
 			case "heading":
 				return <h2 key={item.text}>{item.text}</h2>;
 			case "list":

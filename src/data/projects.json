@@ -12,8 +12,12 @@
 				"date": "2024-03-15",
 				"content": [
 					{
+						"type": "heading",
+						"text": "Project Overview"
+					},
+					{
 						"type": "paragraph",
-						"text": "In this project, I developed a pet tracking system using LoRaWAN technology and the Sidewalk gateway. The system consists of a small, lightweight tracker that can be attached to a pet's collar and a web application for monitoring their location."
+						"text": "In this project, I began development of a pet tracking system using LoRaWAN technology and the Sidewalk gateway. The system consists of a small, lightweight tracker that can be attached to a pet's collar and a web application for monitoring their location."
 					},
 					{
 						"type": "heading",
@@ -34,7 +38,7 @@
 					},
 					{
 						"type": "paragraph",
-						"text": "We decided to use the Seeed Studio Xiao nRF52840 Sense board for the tracker, which comes with built-in Sidewalk capabilities. Once we got the board, we started small with the blinky example to get familiar with the arduino IDE and bootloader."
+						"text": "We decided to use the Seeed Studio Xiao nRF52840 Sense board for the tracker, which comes with built-in Sidewalk capabilities. Once we got the board, we started small with the blinky example to get familiar with the Arduino IDE and bootloader."
 					},
 					{
 						"type": "code",
@@ -42,9 +46,16 @@
 						"text": "// blinky sameple\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  delay(1000);\n  digitalWrite(LED_BUILTIN, LOW);\n  delay(1000);\n}"
 					},
 					{
-						"type": "web",
-						"items": "",
-						"text": "sidewalk example"
+						"type": "paragraph",
+						"text": "We very quicky decided that the Arduino IDE is limited and decided to try PlatformIO. PlatformIO helps build a much larger project and compile it onto the microcontroller. We found a helpful <a href=\"https://wiki.seeedstudio.com/xiao-ble-sidewalk/\" target=\"_blank\" rel=\"noopener noreferrer\">sidewalk tutorial</a> that we thought would give us a nice start."
+					},
+					{
+						"type": "heading",
+						"text": "Prototype Board"
+					},
+					{
+						"type": "paragraph",
+						"text": "The Seeed Studio Xiao nRF52840 sense board only has Bluetooth which does allow communication with Amazon Sidewalk but only has a range of 100 meters. We decided to create a board that would include a E220-900T22S LoRa module and be portable. We also included a connector for a LiPo battery to be recharged using the USB-C from the microcontroller. We decided to stick with a rechargeable solution since we aren’t certain about how much power it draws. LoRa range is around 10km which allows for greater coverage and no need for GPS. The goal was to maximize battery while keeping a slim and comfortable profile for a pet."
 					}
 				]
 			}
