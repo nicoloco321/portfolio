@@ -70,6 +70,14 @@
 						"items": "sidewalk.png",
 						"alt": "Sidewalk IOT Core",
 						"caption": "Snapshot of IOT Core Sidewalk provisioned device"
+					},
+					{
+						"type": "heading",
+						"text": "Where I'm At"
+					},
+					{
+						"type": "paragraph",
+						"text": "I have reached a roadblock where two hex files need to be flashed onto the microcontroller. I made an oversight where I thought a jlink would not be necessary since the board has an Arduino bootloader. I discovered that you could flash a .uf2 file using Arduino but not a .hex file. There seems to be ways to convert .hex files to .uf2 files but they are not reliable. It is also not recommended to combine .hex files after being compiled."
 					}
 				]
 			}
