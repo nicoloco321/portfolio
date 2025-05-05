@@ -20,25 +20,32 @@ const BlogPost = () => {
 
 	const { title, date, content } = project.blogContent;
 
-	const renderContent = (item) => {
+	const renderContent = (item, index) => {
 		switch (item.type) {
 			case "paragraph":
-				return <p key={item.text} dangerouslySetInnerHTML={{ __html: item.text }} />;
+				return <p key={`p-${index}`} dangerouslySetInnerHTML={{ __html: item.text }} />;
 			case "heading":
-				return <h2 key={item.text}>{item.text}</h2>;
+				return <h2 key={`h-${index}`}>{item.text}</h2>;
 			case "list":
 				return (
-					<ul key={item.items.join()}>
-						{item.items.map((listItem, index) => (
-							<li key={index}>{listItem}</li>
+					<ul key={`ul-${index}`}>
+						{item.items.map((listItem, idx) => (
+							<li key={`li-${index}-${idx}`}>{listItem}</li>
 						))}
 					</ul>
 				);
 			case "code":
 				return (
-					<pre key={item.text} className="code-block">
+					<pre key={`code-${index}`} className="code-block">
 						<code className={`language-${item.language || "cpp"}`}>{item.text}</code>
 					</pre>
+				);
+			case "image":
+				return (
+					<div key={`img-${index}`} className="blog-image">
+						<img src={item.items} alt={item.alt || ""} />
+						{item.caption && <p className="image-caption">{item.caption}</p>}
+					</div>
 				);
 			default:
 				return null;
@@ -52,7 +59,9 @@ const BlogPost = () => {
 				<div className="blog-meta">
 					<span className="date">{new Date(date).toLocaleDateString()}</span>
 				</div>
-				<div className="blog-content">{content.map((item, index) => renderContent(item))}</div>
+				<div className="blog-content">
+					{content.map((item, index) => renderContent(item, index))}
+				</div>
 				<div className="blog-links">
 					<a
 						href={project.demoLink}

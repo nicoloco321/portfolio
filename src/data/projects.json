@@ -56,6 +56,20 @@
 					{
 						"type": "paragraph",
 						"text": "The Seeed Studio Xiao nRF52840 sense board only has Bluetooth which does allow communication with Amazon Sidewalk but only has a range of 100 meters. We decided to create a board that would include a E220-900T22S LoRa module and be portable. We also included a connector for a LiPo battery to be recharged using the USB-C from the microcontroller. We decided to stick with a rechargeable solution since we aren’t certain about how much power it draws. LoRa range is around 10km which allows for greater coverage and no need for GPS. The goal was to maximize battery while keeping a slim and comfortable profile for a pet."
+					},
+					{
+						"type": "heading",
+						"text": "Development"
+					},
+					{
+						"type": "paragraph",
+						"text": "I began following the guide and installed all the dependencies that are needed. There is a Nordic application for development called <a href=\"https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-desktop/\" target=\"_blank\" rel=\"noopener noreferrer\">nRF Connect</a> which helps setup zephyr packages and helps flash new firmware onto the nrf52840. Once I setup all the dev tools I ran the provisioning script for the Nordic SoC."
+					},
+					{
+						"type": "image",
+						"items": "/portfolio/src/assets/sidewalk.png",
+						"alt": "Sidewalk IOT Core",
+						"caption": "Snapshot of IOT Core Sidewalk provisioned device"
 					}
 				]
 			}
