@@ -6,6 +6,16 @@ import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
 
+// Import all images from assets folder
+const importImage = (imageName) => {
+	try {
+		return new URL(`../assets/${imageName}`, import.meta.url).href;
+	} catch (error) {
+		console.error(`Error loading image: ${imageName}`, error);
+		return null;
+	}
+};
+
 const BlogPost = () => {
 	const { projectId } = useParams();
 	const project = projectData.projects.find((p) => p.id === projectId);
@@ -41,9 +51,10 @@ const BlogPost = () => {
 					</pre>
 				);
 			case "image":
+				const imageSrc = importImage(item.items);
 				return (
 					<div key={`img-${index}`} className="blog-image">
-						<img src={item.items} alt={item.alt || ""} />
+						<img src={imageSrc} alt={item.alt || ""} />
 						{item.caption && <p className="image-caption">{item.caption}</p>}
 					</div>
 				);

@@ -67,7 +67,7 @@
 					},
 					{
 						"type": "image",
-						"items": "/portfolio/src/assets/sidewalk.png",
+						"items": "sidewalk.png",
 						"alt": "Sidewalk IOT Core",
 						"caption": "Snapshot of IOT Core Sidewalk provisioned device"
 					}
