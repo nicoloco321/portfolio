@@ -63,7 +63,7 @@
 					},
 					{
 						"type": "paragraph",
-						"text": "I began following the guide and installed all the dependencies that are needed. There is a Nordic application for development called <a href=\"https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-desktop/\" target=\"_blank\" rel=\"noopener noreferrer\">nRF Connect</a> which helps setup zephyr packages and helps flash new firmware onto the nrf52840. Once I setup all the dev tools I ran the provisioning script for the Nordic SoC."
+						"text": "I began following the guide and installed all the dependencies that are needed. There is a Nordic application for development called <a href=\"https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-desktop/\" target=\"_blank\" rel=\"noopener noreferrer\">nRF Connect</a> which helps setup the zephyr sdk and helps flash new firmware onto the nrf52840. Once I setup all the dev tools I ran the provisioning script for the Nordic SoC. This creates a credentials.json file that is used to authenticate with the Sidewalk network."
 					},
 					{
 						"type": "image",
