@@ -21,6 +21,7 @@ const BlogPost = () => {
 	const project = projectData.projects.find((p) => p.id === projectId);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		Prism.highlightAll();
 	}, [project]);
 
