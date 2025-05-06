@@ -95,7 +95,7 @@
 					},
 					{
 						"type": "paragraph",
-						"text": "This is a simple concept design I had for a react website that would help locate your pet. On the bottom left it would have your pets and a corresponding location on a map."
+						"text": "This is a simple concept design I had for a react website that would help locate your pet. On the bottom left it would have your pets and a corresponding location on a map. In the top left would be a simple user details button."
 					}
 				]
 			}
