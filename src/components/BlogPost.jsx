@@ -59,6 +59,16 @@ const BlogPost = () => {
 						{item.caption && <p className="image-caption">{item.caption}</p>}
 					</div>
 				);
+			case "iframe":
+				return (
+					<iframe
+						key={`iframe-${index}`}
+						src={item.src}
+						alt={item.alt || ""}
+						title={item.title || "Iframe"}
+						style={{ border: "none" }}
+					></iframe>
+				);
 			default:
 				return null;
 		}

@@ -78,6 +78,24 @@
 					{
 						"type": "paragraph",
 						"text": "I have reached a roadblock where two hex files need to be flashed onto the microcontroller. I made an oversight where I thought a jlink would not be necessary since the board has an Arduino bootloader. I discovered that you could flash a .uf2 file using Arduino but not a .hex file. There seems to be ways to convert .hex files to .uf2 files but they are not reliable. It is also not recommended to combine .hex files after being compiled."
+					},
+					{
+						"type": "heading",
+						"text": "Next Steps"
+					},
+					{
+						"type": "paragraph",
+						"text": "I think there is still a lot to do in this project. One big step I want to get accomplished is getting a location using just the Sidewalk network. Jlink has a lot of benefits, it allows debugging but can also store information in specific registers of the flash."
+					},
+					{
+						"type": "iframe",
+						"src": "https://xd.adobe.com/embed/feae6c77-c1fb-4968-9f7e-bdae4ec1c82f-abfd/",
+						"title": "Pet Tracker Prototype web app",
+						"alt": "Pet Tracker Prototype web app"
+					},
+					{
+						"type": "paragraph",
+						"text": "This is a simple concept design I had for a react website that would help locate your pet. On the bottom left it would have your pets and a corresponding location on a map."
 					}
 				]
 			}

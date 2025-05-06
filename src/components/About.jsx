@@ -10,8 +10,7 @@ const About = () => {
 						<h1>Nicholas Buryniuk</h1>
 						<h2>Software Developer</h2>
 						<p>
-							Welcome to my portfolio! I'm a passionate developer who loves creating beautiful and
-							functional web applications.
+							Welcome to my blog. I am a Software Developer with a passion in working with new technology.
 						</p>
 					</div>
 					<div className="about-image">
