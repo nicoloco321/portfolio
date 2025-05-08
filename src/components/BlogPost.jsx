@@ -77,6 +77,9 @@ const BlogPost = () => {
 	return (
 		<div className="blog-post">
 			<div className="container">
+				<a href="/" className="button" style={{ marginBottom: "20px" }}>
+					← home
+				</a>
 				<h1>{title}</h1>
 				<div className="blog-meta">
 					<span className="date">{new Date(date).toLocaleDateString()}</span>
@@ -85,22 +88,26 @@ const BlogPost = () => {
 					{content.map((item, index) => renderContent(item, index))}
 				</div>
 				<div className="blog-links">
-					<a
-						href={project.demoLink}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="demo-link"
-					>
-						View Live Demo
-					</a>
-					<a
-						href={project.githubLink}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="github-link"
-					>
-						View on GitHub
-					</a>
+					{project.demoLink !== "#" && (
+						<a
+							href={project.demoLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="demo-link"
+						>
+							View Live Demo
+						</a>
+					)}
+					{project.githubLink !== "#" && (
+						<a
+							href={project.githubLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="github-link"
+						>
+							View on GitHub
+						</a>
+					)}
 				</div>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
 	return (
-		<Router basename="/portfolio">
+		<Router basename="/portfolio/">
 			<div className="portfolio">
 				<Header />
 				<main>
@@ -20,9 +20,9 @@ function App() {
 							path="/"
 							element={
 								<>
-									<About />
-									<Skills />
 									<Projects />
+									<Skills />
+									<About />
 									<Contact />
 								</>
 							}

@@ -15,14 +15,17 @@ const Projects = () => {
 								<p>{project.description}</p>
 							</Link>
 							<div className="project-links">
-								<a
-									href={project.demoLink}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="demo-link"
-								>
-									View Live Demo
-								</a>
+								{project.demoLink !== "#" && (
+									<a
+										href={project.demoLink}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="demo-link"
+									>
+										View Live Demo
+									</a>
+								)}
+								{project.githubLink !== "#" && (
 								<a
 									href={project.githubLink}
 									target="_blank"
@@ -31,6 +34,7 @@ const Projects = () => {
 								>
 									View on GitHub
 								</a>
+								)}
 							</div>
 						</div>
 					))}

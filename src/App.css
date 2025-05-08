@@ -623,3 +623,32 @@ main {
 	border-radius: 8px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Button styles */
+.button {
+	display: inline-block;
+	padding: 0.8rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: white;
+	background-color: #0984e3; /* Primary theme color */
+	border: none;
+	border-radius: 25px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+	background-color: #2d3436; /* Secondary theme color */
+	color: #fff;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+	transform: translateY(-3px);
+}
+
+.button:active {
+	transform: translateY(1px);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
