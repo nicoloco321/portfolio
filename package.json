@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "hompage": "https://nicoloco321.github.io/portfolio",
+  "hompage": "https://nicoloco321.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
