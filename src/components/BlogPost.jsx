@@ -77,7 +77,7 @@ const BlogPost = () => {
 	return (
 		<div className="blog-post">
 			<div className="container">
-				<a href="/" className="button" style={{ marginBottom: "20px" }}>
+				<a href="/portfolio/" className="button" style={{ marginBottom: "20px" }}>
 					← home
 				</a>
 				<h1>{title}</h1>
