@@ -22,18 +22,18 @@ const Projects = () => {
 										rel="noopener noreferrer"
 										className="demo-link"
 									>
-										View Live Demo
+										View Demo
 									</a>
 								)}
 								{project.githubLink !== "#" && (
-								<a
-									href={project.githubLink}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="github-link"
-								>
-									View on GitHub
-								</a>
+									<a
+										href={project.githubLink}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="github-link"
+									>
+										View on GitHub
+									</a>
 								)}
 							</div>
 						</div>

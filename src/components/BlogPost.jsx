@@ -95,7 +95,7 @@ const BlogPost = () => {
 							rel="noopener noreferrer"
 							className="demo-link"
 						>
-							View Live Demo
+							View Demo
 						</a>
 					)}
 					{project.githubLink !== "#" && (

@@ -111,7 +111,7 @@
 					},
 					{
 						"type": "list",
-						"items":[
+						"items": [
 							"Use the Jlink to flash the .hex file",
 							"Test location using the Sidewalk network",
 							"Write custom firmware to the nrf52840",
@@ -126,7 +126,7 @@
 			"title": "Dark Souls",
 			"description": "A database application that stores weapons, armor, boss entities, spells, and all their corresponding stats",
 			"demoLink": "#",
-			"githubLink": "#",
+			"githubLink": "https://github.com/cs374/gg",
 			"learnMore": "/blog/dark-souls",
 			"blogContent": {
 				"title": "Creating a Dark Souls Database Application",
@@ -162,18 +162,30 @@
 		},
 		{
 			"id": "project3",
-			"title": "Project 3",
-			"description": "Description of your third project goes here.",
-			"demoLink": "#",
-			"githubLink": "#",
-			"learnMore": "/blog/project3",
+			"title": "Portfilio website",
+			"description": "A website that I use to tell people about my projects and skills.",
+			"demoLink": "https://nicoloco321.github.io/portfolio/",
+			"githubLink": "https://github.com/nicoloco321/portfolio",
+			"learnMore": "/blog/portfolio-website",
 			"blogContent": {
-				"title": "Project 3: Detailed Overview",
+				"title": "Creating My Portfolio Website",
 				"date": "2024-01-10",
 				"content": [
 					{
 						"type": "paragraph",
-						"text": "This is a placeholder for the third project's blog post content."
+						"text": "This project involved creating a personal portfolio website to showcase my skills and projects. The website is built with React and uses a json file to store project data."
+					},
+					{
+						"type": "heading",
+						"text": "Technical Stack"
+					},
+					{
+						"type": "list",
+						"items": [
+							"React for the web application",
+							"JSON file for project data storage",
+							"React-router for navigation"
+						]
 					}
 				]
 			}
