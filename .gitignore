@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # Credentials
-src/cred/
-src/cred/*
+cred/

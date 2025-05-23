@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "hompage": "https://nicoloco321.github.io",
+  "hompage": "https://nicoloco321.github.io/portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "@types/prismjs": "^1.26.5",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "mongodb": "^6.16.0",
+    "portfolio": "file:",
     "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
