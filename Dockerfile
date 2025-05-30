@@ -40,3 +40,9 @@ EXPOSE 5050
 
 # Command to run the application
 CMD ["node", "--env-file=server/config.env", "server/server.js"]
+
+# Expose the port the app runs on
+EXPOSE 5173
+
+# Command to run the application
+CMD ["npm", "run", "dev", "--", "--host"]
