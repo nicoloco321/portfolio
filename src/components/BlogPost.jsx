@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import projectData from "../data/projects.json";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-c";
@@ -18,12 +17,43 @@ const importImage = (imageName) => {
 
 const BlogPost = () => {
 	const { projectId } = useParams();
-	const project = projectData.projects.find((p) => p.id === projectId);
+	const [project, setProject] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		window.scrollTo(0, 0);
-		Prism.highlightAll();
+		const fetchBlogPost = async () => {
+			try {
+				const response = await fetch(`http://localhost:5050/api/blog/${projectId}`);
+				if (!response.ok) {
+					throw new Error("Blog post not found");
+				}
+				const data = await response.json();
+				setProject(data);
+			} catch (err) {
+				setError(err.message);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchBlogPost();
+	}, [projectId]);
+
+	useEffect(() => {
+		if (project) {
+			window.scrollTo(0, 0);
+			Prism.highlightAll();
+		}
 	}, [project]);
+
+	if (loading) {
+		return <div>Loading...</div>;
+	}
+
+	if (error) {
+		return <div>Error: {error}</div>;
+	}
 
 	if (!project || !project.blogContent) {
 		return <div>Blog post not found</div>;
