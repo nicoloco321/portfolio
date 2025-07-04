@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "vite",
 		"predeploy": "npm run build",
-		"deploy": "Hello World",
+		"deploy": "",
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
