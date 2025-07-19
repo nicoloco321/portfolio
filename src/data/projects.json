@@ -6,7 +6,7 @@
 			"description": "A pet tracker app that allows you to track your pets using a LoRaWAN network",
 			"demoLink": "#",
 			"githubLink": "#",
-			"learnMore": "/blog/pet-tracker",
+			"learnMore": "/portfolio/pet-tracker",
 			"blogContent": {
 				"title": "Building a Pet Tracker with LoRaWAN",
 				"date": "2024-03-15",
@@ -127,7 +127,7 @@
 			"description": "A database application that stores weapons, armor, boss entities, spells, and all their corresponding stats",
 			"demoLink": "#",
 			"githubLink": "https://github.com/cs374/gg",
-			"learnMore": "/blog/dark-souls",
+			"learnMore": "/portfolio/dark-souls",
 			"blogContent": {
 				"title": "Creating a Dark Souls Database Application",
 				"date": "2024-02-20",
@@ -166,7 +166,7 @@
 			"description": "A website that I use to tell people about my projects and skills.",
 			"demoLink": "https://nicoloco321.github.io/portfolio/",
 			"githubLink": "https://github.com/nicoloco321/portfolio",
-			"learnMore": "/blog/portfolio-website",
+			"learnMore": "/portfolio/portfolio-website",
 			"blogContent": {
 				"title": "Creating My Portfolio Website",
 				"date": "2024-01-10",
