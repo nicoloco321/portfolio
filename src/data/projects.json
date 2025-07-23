@@ -72,12 +72,68 @@
 						"caption": "Snapshot of IOT Core Sidewalk provisioned device"
 					},
 					{
+						"type": "paragraph",
+						"text": "Once I got the device provisioned I moved on to flashing the nrf52840. I got a Nordic nrf52840-DK and used the j-link built in. I then plugged it into the seeed studio expansion board using jumper wires. I made sure to only plug in the developer kit as it provides 3.7V power to the expansion board. If both are plugged in at the same time, it may cause over voltage to the expansion board and damage the current protection."
+					},
+					{
+						"type": "heading",
+						"text": "nRF Connect"
+					},
+					{
+						"type": "paragraph",
+						"text": "nRF allows you to read the whole memory space and flash .hex files to the device. It also prints logs to help debug and device. I used it to flash the credentials and firmware to ping sidewalk."
+					},
+					{
+						"type": "image",
+						"items": "nrf.png",
+						"alt": "nRF Connect",
+						"caption": "Snapshot of nRF Connect with the device connected"
+					},
+					{
+						"type": "paragraph",
+						"text": "I finished flashing the device and went into the Iot Core Dashboard and noticed I got an uplink and the device status changed to registered. This means that the nrf52840 is now communicating with the Amazon sidewalk network."
+					},
+					{
+						"type": "image",
+						"items": "uplink.png",
+						"alt": "Uplink from Sidewalk",
+						"caption": "Snapshot of IOT Core Sidewalk uplink"
+					},
+					{
+						"type": "heading",
+						"text": "Web Application"
+					},
+					{
+						"type": "paragraph",
+						"text": "I started following an <a href=\"https://github.com/aws-samples/aws-iot-core-for-amazon-sidewalk-sample-app/\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon Sidewalk sample app</a> that uses the nrf52840 to send location data to the Sidewalk network. The sample app is written in C and uses the Zephyr RTOS. It allows you to send location data using Bluetooth and receive it on the web application. These are the commands I used to get the environment set up."
+					},
+					{
+						"type": "code",
+						"language": "bash",
+						"text": "python3 -m pip install --user virtualenv\npython3 -m venv sample-app-env\nsource sample-app-env/bin/activate\npython3 -m pip install --upgrade pip\npython3 -m pip install -r requirements.txt\npython3 -m pip install pyjwt -t ./ApplicationServerDeployment/lambda/authLibs"
+					},
+					{
+						"type": "paragraph",
+						"text": "This is the deployment script that I used to deploy the sample app to AWS. It creates the necessary resources in AWS and deploys the web application."
+					},
+					{
+						"type": "code",
+						"language": "bash",
+						"text": "python3 ApplicationServerDeployment/deploy_stack.py"
+					},
+					{
+						"type": "image",
+						"items": "app.png",
+						"alt": "Sidewalk sample app",
+						"caption": "Snapshot of the Sidewalk sample app"
+					},
+					{
 						"type": "heading",
 						"text": "Where I'm At"
 					},
 					{
 						"type": "paragraph",
-						"text": "I have reached a roadblock where two hex files need to be flashed onto the microcontroller. I made an oversight where I thought a jlink would not be necessary since the board has an Arduino bootloader. I discovered that you could flash a .uf2 file using Arduino but not a .hex file. There seems to be ways to convert .hex files to .uf2 files but they are not reliable. It is also not recommended to combine .hex files after being compiled."
+						"text": "I have reached a roadblock where the app is making a devices call and only returning an empty array. I believe that is what is causing the app to show that there are no devices connected even though the IoT Core dashboard shows a connected device. I am currently troubleshooting this issue and trying to figure out if it is a problem with the app or the device configuration."
 					},
 					{
 						"type": "heading",
@@ -103,7 +159,7 @@
 					},
 					{
 						"type": "paragraph",
-						"text": "have learned a lot throughout this project. A lot of the current tracking devices use similar chips but are all slightly different. I have also discovered that power draw is based on lots of factors which lead to battery life very hard to predict. Antenna design is not trivial, it may take many iterations to find the optimal range of an antenna. Jlink is a crucial part to helping to develop embedded hardware as it can help debug and work with the chip on a more bare metal approach."
+						"text": "have learned a lot throughout this project. A lot of the current tracking devices use similar chips but are all slightly different. I have also discovered that power draw is based on lots of factors which lead to battery life very hard to predict. Antenna design is not trivial, it may take many iterations to find the optimal range of an antenna. Jlink is a crucial part to helping to develop embedded hardware as it can help debug and work with the chip on a more bare metal approach. It is also tricky to try and find solutions to the problem one may have at the time but it is also good to reach out because someone may be able to help."
 					},
 					{
 						"type": "heading",
@@ -112,7 +168,6 @@
 					{
 						"type": "list",
 						"items": [
-							"Use the Jlink to flash the .hex file",
 							"Test location using the Sidewalk network",
 							"Write custom firmware to the nrf52840",
 							"React for the web application with mapbox and pathtracking"

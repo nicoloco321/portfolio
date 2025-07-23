@@ -11,13 +11,13 @@ import "./App.css";
 
 function App() {
 	return (
-		<Router basename="/">
+		<Router basename="/portfolio">
 			<div className="portfolio">
 				<Header />
 				<main>
 					<Routes>
 						<Route
-							path="/portfolio/"
+							path="/"
 							element={
 								<>
 									<Projects />
