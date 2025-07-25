@@ -1,0 +1,4 @@
+id,title,description,demoLink,githubLink,learnMore
+project1,Pet Tracker,A pet tracker app that allows you to track your pets using a LoRaWAN network,#,#,/portfolio/pet-tracker
+project2,Dark Souls,"A database application that stores weapons, armor, boss entities, spells, and all their corresponding stats",#,https://github.com/cs374/gg,/portfolio/dark-souls
+project3,Portfilio website,A website that I use to tell people about my projects and skills.,https://nicoloco321.github.io/portfolio/,https://github.com/nicoloco321/portfolio,/portfolio/portfolio-website

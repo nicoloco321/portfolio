@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 
 const Projects = () => {
 	const [projects, setProjects] = useState([]);
@@ -7,21 +8,16 @@ const Projects = () => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		const fetchProjects = async () => {
-			try {
-				const response = await fetch("http://localhost:5050/api/blog");
-				if (!response.ok) {
-					throw new Error("Failed to fetch projects");
-				}
-				const data = await response.json();
+		async function fetchProjects() {
+			const { data, error } = await supabase.from("projects").select("*");
+			if (error) {
+				console.error(error);
+				setError("Failed to fetch projects from Supabase.");
+			} else {
 				setProjects(data);
-			} catch (err) {
-				setError(err.message);
-			} finally {
-				setLoading(false);
 			}
-		};
-
+			setLoading(false);
+		}
 		fetchProjects();
 	}, []);
 

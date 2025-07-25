@@ -14,7 +14,9 @@
 		"import-blog": "node --env-file=server/config.env server/scripts/importBlogPosts.js"
 	},
 	"dependencies": {
+		"@supabase/supabase-js": "^2.52.1",
 		"@types/prismjs": "^1.26.5",
+		"@vercel/analytics": "^1.5.0",
 		"cors": "^2.8.5",
 		"dotenv": "^16.5.0",
 		"express": "^5.1.0",
